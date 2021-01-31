@@ -28,34 +28,40 @@ class Screen4 extends StatelessWidget {
           flex: 1,
           child: Row(
             children: [
-              GestureDetector(
-                onTap : (){
-                  context.read<Screen4Bloc>().add(BackgroundSet(color: Colors.pink));
-                } ,
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.pink,
+              Expanded(
+                child: GestureDetector(
+                  onTap : (){
+                    context.read<Screen4Bloc>().add(BackgroundSet(color: Colors.cyanAccent));
+                  } ,
+                  child: Container(
+                    width: double.infinity,
+                    height: 100,
+                    color: Colors.cyanAccent,
+                  ),
                 ),
               ),
-              GestureDetector(
-                onTap: (){
-                  context.read<Screen4Bloc>().add(BackgroundSet(color: Colors.orange));
-                },
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.orange,
+              Expanded(
+                child: GestureDetector(
+                  onTap: (){
+                    context.read<Screen4Bloc>().add(BackgroundSet(color: Colors.orange));
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 100,
+                    color: Colors.orange,
+                  ),
                 ),
               ),
-              GestureDetector(
-                onTap: (){
-                  context.read<Screen4Bloc>().add(BackgroundSet(color: Colors.grey));
-                },
-                child: Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.grey,
+              Expanded(
+                child: GestureDetector(
+                  onTap: (){
+                    context.read<Screen4Bloc>().add(BackgroundSet(color: Colors.grey));
+                  },
+                  child: Container(
+                    width: double.infinity,
+                    height: 100,
+                    color: Colors.grey,
+                  ),
                 ),
               ),
             ],
